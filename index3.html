@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Методы JS</title>
+</head>
+<body>
+    <script>
+        /*a=[]
+        //добавление элементов в конец массива
+        a.push(3)
+        a.push(5)
+        a.push(2)
+        console.log(a.len)
+        //добавление эл-ов в начало массива
+        a.unshift(0)
+        a.unshift(-3)
+
+        //постановка эл-та на определенную позицию
+        //1-на какое место, 2-удаляем или нет, 3-что добавить
+        a.splice(1,0,7)*/
+
+        a=[17,18,23,21,25,3,10,5,6]
+        b=[1,3,7,9,2,4,8]
+        //возвращает удалеенный элемент
+        //b=a.pop()
+
+        //удаляет первый элемент
+        //b=a.shift()
+
+        //удаляет с определенного инднкса/добавляет
+        //1-с какой позиции, 2-сколько эл-ов, 3-какие ставим
+        //b=a.splice(4,6,15,4)
+
+        //соеденить два массива
+        //c=a.concat(b)
+
+        //записать массив в строку (по убыванию)
+        //s=a.join("; ")
+        
+        //сортировка
+        //a.sort()
+
+        //сортировка с другим массивом
+        //b=a.toSorted()
+
+        //сортировка в обратном порядке
+        //a.reverse()
+
+        //поиск индекса элемента
+        //первое вхождение
+        //x=a.indexOf(5)
+        //последнее вхождение
+        //y=a.lastIndexOf(5)
+
+        //проверяет есть или нет элементции
+        //1-число для проверки, 2-с какой пози
+        //console.log(a.includes(5,2))
+        //console.log(a.includes(3))
+
+        //проверка эл-ов по условию 
+        //console.log(a.every(n=>n>=0))//все элементы
+        //console.log(a.some(n=>n>=0))//хотябы один
+
+        //фильтр
+        //console.log(a.filter(n=>n>0))
+
+        //перебор эл-ов применение действий
+        //a.forEach(n =>console.log(n*n))
+
+
+        //возвращает первый эл который удовлетворяет усл
+        //x=a.find(n=>n>5)
+        //последний элемемнт
+        //x=a.findLast(n=>n>5)
+        //возвращает инднкс
+        //x=a.findIndex(n=>n>5)
+        //возвращает инднкс последнего
+        //x=a.findLastIndex(n=>n>5)
+
+
+        //ФУНКЦИИ//
+        /*function hello()
+        {
+            console.log("Привет")
+        }
+        const message=hello
+        message()
+        const mes=function()
+        {
+            console.log("Провет!!!")
+        }
+        mes()*/
+
+        /*function hello(message)
+        {
+            console.log(message)
+        }
+        hello("Привет")
+        hello("Добрый день")
+        hello()*/
+
+        /*function getSum(x,y=7)
+        {
+            z=x+y
+            return z
+        }
+        console.log(getSum(5,8))*/
+
+        /*function getSquare(x,y,z)
+        {
+            p=(x+y+z)/2
+            S=Math.sqrt(p * (p - x) * (p - y) * (p - z));
+            return S
+        }
+        a=parseFloat(prompt("Введите длину 1 стороны"))
+        b=parseFloat(prompt("Введите длину 2 стороны"))
+        c=parseFloat(prompt("Введите длину 3 стороны"))
+        d=parseFloat(prompt("Введите длину 4 стороны"))
+        k=parseFloat(prompt("Введите длину 5 стороны"))
+        m=parseFloat(prompt("Введите длину 1 диагонали"))
+        n=parseFloat(prompt("Введите длину 2 диагонали"))
+        S=getSquare(a,b,m)+getSquare(c,n,m)+getSquare(n,k,d)
+        console.log(S)*/
+
+        //найти сумму факториалов в промежутке от a до b. Функция считает факториал числа
+        function sumFactorials(a, b, step) 
+        {
+        sum = 0;
+        for (let i = a; i <= b; i += step) 
+        {
+        factorial = 1;
+        for (let j = 2; j <= i; j++) 
+        {
+        factorial *= j;
+        }
+        sum += factorial;
+        }
+        return sum;
+        }
+        console.log(sumFactorials(1,5,3))
+
+
+        /*sum = 0;
+        arr = [];
+        factorial = 1;
+        function getSumFactorial(a, b, step) 
+        {
+        for (let i = a; i <= b; i += step) 
+        {
+        arr.push(i);
+        }
+        for (let j = 0; j < arr.length; j++) 
+        {
+        for (let k = 1; k <= arr[j]; k++) 
+        {
+            factorial *= k;
+        }
+        sum = sum + factorial;
+        }
+        return sum;
+        }
+        console.log(getSumFactorial(1, 5, 3));*/
+
+        //вывести все простые числа в промежутке от a до b. Функция проверяет простое число или нет
+        /*function primality(n) {
+        for(i = 2; i < n; i++) 
+        {
+        if(n % i === 0) return false;
+        }
+        return n > 1;
+        }
+        a=parseFloat(prompt("Введите a"))
+        b=parseFloat(prompt("Введите b"))
+        console.log(a,b)*/
+    </script>
+</body>
+</html>
